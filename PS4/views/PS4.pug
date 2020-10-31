@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1 Dictionary
+    p Works using the Oxford Dictionaries API located here: https://developer.oxforddictionaries.com/
+    p Please type your word below (will only work on the base word -> type frog not frogs)
+    p Searching with no fields will give you the definition of a sword
+    form(name="definitionFinder", method="post")
+        div.input
+            span.label DefinitionFinder
+            input(type="text",  name="wordRequest")
+        div.actions
+            input(type="submit", value="search")
+    p definition: #{results}

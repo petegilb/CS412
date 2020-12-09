@@ -1,0 +1,18 @@
+<html>
+<h1>Welcome to Peter's PS6</h1>
+<p>Here's some sample words</p>
+
+<button (click)="clickButton()">Fetch Data</button>
+
+<div *ngIf="clicked">
+  <ul *ngFor="let word of words">
+    <li (click)="selectWord(word)">{{word.name}}</li>
+  </ul>
+</div>
+
+<div name ="definition" *ngIf="selectedWord">
+  definiton: {{selectedWord.def}}
+
+</div>
+
+</html>

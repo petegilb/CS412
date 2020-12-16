@@ -1,0 +1,10 @@
+
+<form (submit)="getDef()">
+  <input [(ngModel)]="wordInput" name="wordInput">
+  <button type="submit">Search for Definition</button>
+</form>
+
+<div name ="definition" *ngIf="currentWord">
+  <h3>definition: {{this.currentWord["definition"]}}</h3>
+  <p>cached: {{this.currentWord["cached"]}}</p>
+</div>

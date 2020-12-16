@@ -1,8 +1,6 @@
 <html>
 <h1>Welcome to Peter's PS6</h1>
-<p>Here's some sample words</p>
-
-<button (click)="clickButton()">Fetch Data</button>
+<p>Calling api to find definitions using our node backend</p>
 
 <div *ngIf="clicked">
   <ul *ngFor="let word of words">
@@ -11,8 +9,9 @@
 </div>
 
 <div name ="definition" *ngIf="selectedWord">
-  definiton: {{selectedWord.def}}
-
+  definition: {{selectedWord.def}}
 </div>
+
+<app-calling-http></app-calling-http>
 
 </html>

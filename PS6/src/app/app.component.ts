@@ -8,18 +8,15 @@ import {Word} from './data/Word';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'PS6';
+  title = 'PS7';
 
   words: Word[] = words;
   selectedWord: Word;
   clicked: boolean;
+  wordInput: string;
 
   selectWord(word: Word): void {
     this.selectedWord = word;
   }
 
-
-  clickButton(): void {
-    this.clicked = true;
-  }
 }

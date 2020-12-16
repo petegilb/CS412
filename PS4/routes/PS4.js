@@ -17,6 +17,15 @@ client.flushdb((err, response) => {
     if (err) {throw new Error('bad stuff happened when flushing')}
 });
 
+router.options("/", function (req, res, next) {
+    res.writeHead(200, {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+    });
+    res.end();
+});
+
 //uses fetch to grab definitions from the Oxford Dictionaries API
 router.route('/')
     .get((req, res) => {
